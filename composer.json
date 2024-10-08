@@ -25,7 +25,7 @@
   },
   "scripts": {
     "post-update-cmd": [
-      "@php artisan vendor:publish --tag=laravel --force"
+      "@php artisan vendor:publish --tag=parser-data-product-wb --force"
     ]
   },
   "extra": {
