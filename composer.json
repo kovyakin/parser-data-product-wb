@@ -19,6 +19,10 @@
     }
   },
   "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan vendor:publish --tag=parser-data-product-wb --force"
+    ],
     "post-update-cmd": [
       "@php artisan vendor:publish --tag=parser-data-product-wb --force"
     ]
