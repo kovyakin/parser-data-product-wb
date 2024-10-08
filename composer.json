@@ -25,9 +25,7 @@
   },
   "extra": {
     "laravel": {
-      "providers": [
-        "Kovyakin\\ParserDataProductWb\\Providers\\ParserServiceProvider"
-      ]
+      "dont-discover": []
     }
   }
 }
