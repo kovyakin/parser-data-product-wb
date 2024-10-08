@@ -25,7 +25,9 @@
       ]
     }
   },
-  "post-update-cmd": [
-  "@php artisan vendor:publish --provider=\"Kovyakin\\ParserDataProductWb\\Providers\\ParserServiceProvider\""
-  ]
+  "scripts": {
+    "post-update-cmd": [
+      "@php artisan vendor:publish --provider=\"Kovyakin\\ParserDataProductWb\\Providers\\ParserServiceProvider\""
+    ]
+  }
 }
