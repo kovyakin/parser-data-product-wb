@@ -18,9 +18,11 @@
       "Kovyakin\\ParserDataProductWb\\": "src"
     }
   },
-  "post-update-cmd": [
-    "php artisan vendor:publish --tag=parser-data-product-wb"
-  ],
+  "scripts": {
+    "post-update-cmd": [
+      "@php artisan vendor:publish --tag=parser-data-product-wb --force"
+    ]
+  },
   "extra": {
     "laravel": {
       "providers": [
