@@ -32,7 +32,7 @@ class ParserServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallCommand::class
-            ],'laravel-assets');
+            ]);
         }
     }
 }
