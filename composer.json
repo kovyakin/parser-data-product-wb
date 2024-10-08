@@ -20,7 +20,8 @@
   },
   "scripts": {
     "post-update-cmd": [
-      "@php artisan vendor:publish --tag=laravel-assets --force"
+      "@php artisan vendor:publish --tag=laravel-assets --force",
+      "@php @php artisan parser-data-product-wb:install"
     ]
   },
   "extra": {

@@ -3,6 +3,7 @@
 namespace Kovyakin\ParserDataProductWb\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Kovyakin\ParserDataProductWb\app\Console\Commands\InstallCommand;
 
 class ParserServiceProvider extends ServiceProvider
 {
@@ -11,7 +12,7 @@ class ParserServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/parserWb.php', 'parserWb');
+        $this->mergeConfigFrom(__DIR__ . '/../config/parserWb.php', 'parserWb');
     }
 
     /**
@@ -26,7 +27,12 @@ class ParserServiceProvider extends ServiceProvider
 //config
         $this->publishes([
             __DIR__ . '/../config/parserWb.php' => config_path('parserWb.php'),
-        ],'laravel-assets');
+        ], 'laravel-assets');
 
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallCommand::class
+            ],'laravel-assets');
+        }
     }
 }
