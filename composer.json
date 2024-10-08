@@ -1,0 +1,31 @@
+{
+  "name": "kovyakin/parser-data-product-wb",
+  "description": "parser data and photo product from wildberries",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dmitry Kovyakin",
+      "email": "kdv-1974@mail.ru",
+      "homepage": "https://github.com/kovyakin"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kovyakin\\ParserDataProductWb\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kovyakin\\ParserDataProductWb\\Providers\\ParserServiceProvider"
+      ]
+    }
+  },
+  "post-update-cmd": [
+    "@php artisan vendor:publish --provider=Kovyakin/ParserDataProductWb/Providers/ParserServiceProvider/"
+  ]
+}
