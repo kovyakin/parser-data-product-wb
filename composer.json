@@ -20,5 +20,12 @@
   },
   "post-update-cmd": [
     "php artisan vendor:publish --tag=parser-data-product-wb"
-  ]
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kovyakin\\ParserDataProductWb\\Providers\\ParserServiceProvider"
+      ]
+    }
+  }
 }
