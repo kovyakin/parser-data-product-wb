@@ -26,7 +26,7 @@ class ParserServiceProvider extends ServiceProvider
 //config
         $this->publishes([
             __DIR__ . '/../config/parserWb.php' => config_path('parserWb.php'),
-        ],'parser-data-product-wb');
+        ],'laravel-assets');
 
     }
 }
