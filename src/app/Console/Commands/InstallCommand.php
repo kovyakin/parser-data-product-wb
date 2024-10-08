@@ -11,7 +11,7 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'parser-data-product-wb:install';
+    protected $signature = 'parser:install';
 
     /**
      * The console command description.
@@ -25,6 +25,7 @@ class InstallCommand extends Command
      */
     public function handle():void
     {
-        $this->call('migrate');
+        $this->ask('Are you sure you want to run this command?');
+
     }
 }
