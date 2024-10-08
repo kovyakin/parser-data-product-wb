@@ -16,16 +16,11 @@
   "autoload": {
     "psr-4": {
       "Kovyakin\\ParserDataProductWb\\": "src"
-    },
-    "scripts": {
-      "post-update-cmd": [
-        "@php artisan vendor:publish --tag=parser-data-product-wb --force"
-      ]
     }
   },
   "scripts": {
     "post-update-cmd": [
-      "@php artisan vendor:publish --tag=parser-data-product-wb --force"
+      "@php artisan vendor:publish --tag=laravel-assets --force"
     ]
   },
   "extra": {
